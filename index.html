@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+
+</head>
+<body>
+<div class="falling">
+    <p></p>
+</div>
+<img class="list2" src="media/icon/list_2.svg" alt="">
+<img class="list3" src="media/icon/list_3.svg" alt="">
+
+<img class="list4" src="media/icon/list_4.svg" alt="logotip kompanii megacom">
+<img class="music" src="media/icon/music.svg" alt="logotip kompanii megacom">
+<div class="music-lab">
+    <p class="music-text">Включите <br> мелодию</p>
+    <audio  id="mySong">
+        <source src="media/audio/12.mp3" type="audio/mp3">
+    </audio>
+    <img class="music-2" src="media/icon/music.svg" alt="logotip kompanii megacom" id="icon">
+
+</div>
+
+<div class="container">
+    <div class="content">
+        <p class="title">Дорогие друзья!</p>
+        <p class="desk">Коллектив компании MegaCom поздравляет Вас с Новым годом!
+            Этот праздник наполнен теплом и радостью, неповторимой атмосферой добрых перемен и исполнения самых заветных
+            желаний.
+            Искренне верим, что 2022 год станет для Вас новым шагом на пути к стремительному развитию и процветанию и
+            поможет воплотить в жизнь самые смелые идеи и амбициозные задачи.
+            Пусть наступающий год увенчает Ваши труды успехом и добавит ярких позитивных впечатлений в каждый прожитый
+            день. Желаем, чтобы везение, счастье, оптимизм и вдохновение стали неотъемлемой частью Вашей жизни!
+            Примите самые искренние пожелания крепкого здоровья, ярких профессиональных побед, радости, мира и
+            благополучия! С Новым годом!
+<div class="sign">
+        <div><p >С уважением, <br>
+        Компания MegaCom </p></div>
+        <div><img src="./media/icon/list_1.svg" alt=""></div>
+
+    </div>
+
+<!--<img class="d" src="media/icon/d.svg" alt="">-->
+
+
+    </div>
+<div class="footer">
+    <img src="media/icon/g.svg" alt="logotip kompanii megacom">
+</div>
+</div>
+
+<script src='snowfall.js'></script>
+<script src="js/snowfall.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(document).snowfall({image :"media/icon/2.png", minSize: 10, maxSize:20});
+    });
+</script>
+
+<script>
+    var mySong = document.getElementById("mySong")
+    var icon = document.getElementById("icon")
+
+    icon.onclick = function () {
+        if(mySong.paused){
+            mySong.play();
+            icon.src = "media/icon/music.svg";
+        }else{
+            mySong.pause();
+            icon.src = "media/icon/music.svg";
+        }
+    }
+</script>
+</body>
+</html>
